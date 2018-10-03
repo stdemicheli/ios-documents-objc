@@ -13,7 +13,7 @@
         <!--Documents-->
         <scene sceneID="y4o-DP-Rpc">
             <objects>
-                <tableViewController id="VYc-Eo-cpr" sceneMemberID="viewController">
+                <tableViewController id="VYc-Eo-cpr" customClass="STDDocumentsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1dx-7I-d3Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="c0h-H2-MAp" kind="show" identifier="ShowDocDetail" id="4Gi-k9-Yw5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,7 +67,7 @@
         <!--Title-->
         <scene sceneID="tHK-J1-CYj">
             <objects>
-                <viewController id="c0h-H2-MAp" sceneMemberID="viewController">
+                <viewController id="c0h-H2-MAp" customClass="STDDocumentDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B3V-2G-me6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,8 +107,17 @@
                         <viewLayoutGuide key="safeArea" id="btn-Uo-e41"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="LCf-7X-bbq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fl0-dX-6Cu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fl0-dX-6Cu">
+                            <connections>
+                                <action selector="save:" destination="c0h-H2-MAp" id="QgV-Ci-NlG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="gIZ-p3-Ank" id="VCI-nz-Qoc"/>
+                        <outlet property="titleTextField" destination="4Wa-ce-XN8" id="cHA-aa-7iU"/>
+                        <outlet property="wordsCountTextLabel" destination="I7W-36-eIs" id="jcF-3y-Sbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZJ-Wc-JId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,4 +140,7 @@
             <point key="canvasLocation" x="-730" y="52"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Gi-k9-Yw5"/>
+    </inferredMetricsTieBreakers>
 </document>
