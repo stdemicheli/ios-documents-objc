@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface STDDocument : NSObject
 
+    - (instancetype)initWithTitle:(NSString *)title body:(NSString *)body;
     @property NSString *title;
     @property NSString *body;
     @property (readonly) int *wordCount;

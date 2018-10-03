@@ -16,6 +16,7 @@
 		3DFB44CC2165505500E97E8E /* STDDocumentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44CB2165505500E97E8E /* STDDocumentDetailViewController.m */; };
 		3DFB44CF2165514000E97E8E /* NSString+STDWordCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44CE2165514000E97E8E /* NSString+STDWordCount.m */; };
 		3DFB44D22165530E00E97E8E /* STDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44D12165530E00E97E8E /* STDDocument.m */; };
+		3DFB44D5216556AF00E97E8E /* STDDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44D4216556AF00E97E8E /* STDDocumentController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		3DFB44CE2165514000E97E8E /* NSString+STDWordCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+STDWordCount.m"; sourceTree = "<group>"; };
 		3DFB44D02165530E00E97E8E /* STDDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDDocument.h; sourceTree = "<group>"; };
 		3DFB44D12165530E00E97E8E /* STDDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STDDocument.m; sourceTree = "<group>"; };
+		3DFB44D3216556AF00E97E8E /* STDDocumentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDDocumentController.h; sourceTree = "<group>"; };
+		3DFB44D4216556AF00E97E8E /* STDDocumentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STDDocumentController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				3DFB44CE2165514000E97E8E /* NSString+STDWordCount.m */,
 				3DFB44D02165530E00E97E8E /* STDDocument.h */,
 				3DFB44D12165530E00E97E8E /* STDDocument.m */,
+				3DFB44D3216556AF00E97E8E /* STDDocumentController.h */,
+				3DFB44D4216556AF00E97E8E /* STDDocumentController.m */,
 			);
 			path = "Models&ModelControllers";
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				3DFB44B021654DD600E97E8E /* AppDelegate.m in Sources */,
 				3DFB44C92165503C00E97E8E /* STDDocumentsTableViewController.m in Sources */,
 				3DFB44CF2165514000E97E8E /* NSString+STDWordCount.m in Sources */,
+				3DFB44D5216556AF00E97E8E /* STDDocumentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
