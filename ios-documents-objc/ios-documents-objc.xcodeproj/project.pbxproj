@@ -14,6 +14,8 @@
 		3DFB44BE21654DD700E97E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44BD21654DD700E97E8E /* main.m */; };
 		3DFB44C92165503C00E97E8E /* STDDocumentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44C82165503C00E97E8E /* STDDocumentsTableViewController.m */; };
 		3DFB44CC2165505500E97E8E /* STDDocumentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44CB2165505500E97E8E /* STDDocumentDetailViewController.m */; };
+		3DFB44CF2165514000E97E8E /* NSString+STDWordCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44CE2165514000E97E8E /* NSString+STDWordCount.m */; };
+		3DFB44D22165530E00E97E8E /* STDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB44D12165530E00E97E8E /* STDDocument.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		3DFB44C82165503C00E97E8E /* STDDocumentsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STDDocumentsTableViewController.m; sourceTree = "<group>"; };
 		3DFB44CA2165505500E97E8E /* STDDocumentDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDDocumentDetailViewController.h; sourceTree = "<group>"; };
 		3DFB44CB2165505500E97E8E /* STDDocumentDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STDDocumentDetailViewController.m; sourceTree = "<group>"; };
+		3DFB44CD2165514000E97E8E /* NSString+STDWordCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+STDWordCount.h"; sourceTree = "<group>"; };
+		3DFB44CE2165514000E97E8E /* NSString+STDWordCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+STDWordCount.m"; sourceTree = "<group>"; };
+		3DFB44D02165530E00E97E8E /* STDDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDDocument.h; sourceTree = "<group>"; };
+		3DFB44D12165530E00E97E8E /* STDDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STDDocument.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,10 @@
 		3DFB44C421654DE400E97E8E /* Models&ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3DFB44CD2165514000E97E8E /* NSString+STDWordCount.h */,
+				3DFB44CE2165514000E97E8E /* NSString+STDWordCount.m */,
+				3DFB44D02165530E00E97E8E /* STDDocument.h */,
+				3DFB44D12165530E00E97E8E /* STDDocument.m */,
 			);
 			path = "Models&ModelControllers";
 			sourceTree = "<group>";
@@ -171,10 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFB44D22165530E00E97E8E /* STDDocument.m in Sources */,
 				3DFB44CC2165505500E97E8E /* STDDocumentDetailViewController.m in Sources */,
 				3DFB44BE21654DD700E97E8E /* main.m in Sources */,
 				3DFB44B021654DD600E97E8E /* AppDelegate.m in Sources */,
 				3DFB44C92165503C00E97E8E /* STDDocumentsTableViewController.m in Sources */,
+				3DFB44CF2165514000E97E8E /* NSString+STDWordCount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
