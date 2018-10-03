@@ -20,18 +20,18 @@
         return self;
     }
     
-    - (void)createWithTitle:(NSString *)title body:(NSString *)body wordCount:(int *)wordCount;
+    - (void)createWithTitle:(NSString *)title body:(NSString *)body;
     {
         STDDocument *document = [[STDDocument alloc] initWithTitle:title body:body];
         [[self documents] addObject:document];
     }
     
-    - (void)updateDoc:(STDDocument *)document
+    - (void)updateDoc:(STDDocument *)document title:(NSString *)title body:(NSString *)body
     {
         NSUInteger index = [[self documents] indexOfObject:document];
         STDDocument *documentToUpdate = [self documents][index];
-        [documentToUpdate setTitle:[document title]];
-        [documentToUpdate setBody:[document body]];
+        [documentToUpdate setTitle:title];
+        [documentToUpdate setBody:body];
         [[self documents] removeObjectAtIndex:index];
         [[self documents] insertObject:documentToUpdate atIndex:index];
     }

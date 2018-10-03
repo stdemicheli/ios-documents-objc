@@ -13,7 +13,7 @@
 - (int *)wordCount
 {
     NSArray *wordArray = [self componentsSeparatedByString:@" "];
-    return (int *)[wordArray count];
+    return wordArray.count;
 }
     
 @end

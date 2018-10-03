@@ -46,13 +46,15 @@
 
     - (IBAction)save:(id)sender
     {
-        NSString *title = [[self document] title];
-        NSString *body = [[self document] body];
+        NSString *title = [[self titleTextField] text];
+        NSString *body = [[self bodyTextView] text];
         
         if ([self document]) {
-            [[self documentController] createWithTitle:title body:body];
-        } else {
             [[self documentController] updateDoc:[self document] title:title body:body];
+        } else {
+            [[self documentController] createWithTitle:title body:body];
         }
+        
+        [[self navigationController] popViewControllerAnimated:YES];
     }
 @end

@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface STDDocumentController : NSObject
 
     @property NSMutableArray *documents;
-    - (void)createWithTitle:(NSString *)title body:(NSString *)body wordCount:(int *)wordCount;
-    - (void)updateDoc:(STDDocument *)document;
+    - (void)createWithTitle:(NSString *)title body:(NSString *)body;
+    - (void)updateDoc:(STDDocument *)document title:(NSString *)title body:(NSString *)body;
     - (void)deleteDoc:(STDDocument *)document;
     
 @end

@@ -33,6 +33,11 @@
         }
         return self;
     }
+    
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,7 +59,9 @@
     STDDocument *document = [[self documentController] documents][[indexPath row]];
     
     [[cell textLabel] setText:[document title]];
-    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d", *[document wordCount]]];
+    int *wordCount = [document wordCount];
+    NSString *wordCountString = [NSString stringWithFormat:@"%d words", wordCount];
+    [[cell detailTextLabel] setText:wordCountString];
     
     return cell;
 }
