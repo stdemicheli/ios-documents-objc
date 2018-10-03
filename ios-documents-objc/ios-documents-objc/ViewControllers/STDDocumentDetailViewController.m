@@ -7,31 +7,52 @@
 //
 
 #import "STDDocumentDetailViewController.h"
+#import "STDDocument.h"
+#import "NSString+STDWordCount.h"
 
-@interface STDDocumentDetailViewController ()
-    @property (weak, nonatomic) IBOutlet UILabel *wordsCountTextLabel;
-    @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-    @property (weak, nonatomic) IBOutlet UITextView *bodyTextView;
+@interface STDDocumentDetailViewController (UITextViewDelegate)
+    
+    - (void)updateViews;
     
 @end
 
 @implementation STDDocumentDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    - (void)setDocument:(STDDocument *)document {
+        [self updateViews];
+    }
+    
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        [self updateViews];
+        [[self bodyTextView] setDelegate:self];
+        [[[self bodyTextView] layer] setBorderColor:[[UIColor grayColor] CGColor]];
+    }
+    
+    - (void)textViewDidChange:(UITextView *)textView
+    {
+        int *wordCount = [[[self bodyTextView] text] wordCount];
+        NSString *wordCountString = [NSString stringWithFormat:@"%d words", wordCount];
+        [[self wordsCountTextLabel] setText:wordCountString];
+    }
 
-/*
-#pragma mark - Navigation
+    - (void)updateViews
+    {
+        if ([self document]) {
+            [[self titleTextField] setText:[[self document] title]];
+            [[self bodyTextView] setText:[[self document] body]];
+        }
+    }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)save:(id)sender {
-}
-    @end
+    - (IBAction)save:(id)sender
+    {
+        NSString *title = [[self document] title];
+        NSString *body = [[self document] body];
+        
+        if ([self document]) {
+            [[self documentController] createWithTitle:title body:body];
+        } else {
+            [[self documentController] updateDoc:[self document] title:title body:body];
+        }
+    }
+@end

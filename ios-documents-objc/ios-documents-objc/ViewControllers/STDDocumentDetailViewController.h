@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "STDDocument.h"
+#import "STDDocumentController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface STDDocumentDetailViewController : UIViewController
+@interface STDDocumentDetailViewController : UIViewController<UITextViewDelegate>
     
-    @property STDDocument *document;
+    @property (nonatomic) STDDocument *document;
     @property STDDocumentController *documentController;
-- (IBAction)save:(id)sender;
+    @property (weak, nonatomic) IBOutlet UILabel *wordsCountTextLabel;
+    @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+    @property (weak, nonatomic) IBOutlet UITextView *bodyTextView;
+    - (IBAction)save:(id)sender;
     
 @end
 
