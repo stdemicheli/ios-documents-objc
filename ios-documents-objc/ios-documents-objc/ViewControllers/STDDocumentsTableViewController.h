@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STDDocumentController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface STDDocumentsTableViewController : UITableViewController
 
+    @property STDDocumentController *documentController;
+    
 @end
 
 NS_ASSUME_NONNULL_END
