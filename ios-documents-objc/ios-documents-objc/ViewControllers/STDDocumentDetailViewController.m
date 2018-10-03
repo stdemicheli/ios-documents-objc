@@ -12,8 +12,6 @@
 
 @interface STDDocumentDetailViewController (UITextViewDelegate)
     
-    - (void)updateViews;
-    
 @end
 
 @implementation STDDocumentDetailViewController

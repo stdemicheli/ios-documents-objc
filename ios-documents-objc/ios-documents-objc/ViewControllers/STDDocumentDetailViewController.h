@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
     @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
     @property (weak, nonatomic) IBOutlet UITextView *bodyTextView;
     - (IBAction)save:(id)sender;
+    - (void)updateViews;
+
     
 @end
 

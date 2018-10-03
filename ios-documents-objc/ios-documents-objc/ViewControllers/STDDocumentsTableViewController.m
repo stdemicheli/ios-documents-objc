@@ -81,6 +81,7 @@
         STDDocument *document = [[self documentController] documents][[indexPath row]];
         [detailVC setDocument:document];
         [detailVC setDocumentController:[self documentController]];
+        [detailVC updateViews];
     }
 }
 
